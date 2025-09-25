@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório - Estruturação de Ativos Digitais Meta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
+        .card.open .card-content {
+            max-height: 1000px; /* Um valor alto para permitir a expansão */
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .card.open .arrow {
+            transform: rotate(180deg);
+        }
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+        
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-800">Relatório de Estruturação de Ativos Digitais</h1>
+            <p class="text-lg text-gray-600 mt-2">Plataformas Meta (Facebook, Instagram, WhatsApp)</p>
+        </header>
+
+        <div class="space-y-6">
+
+            <!-- Card 1: Configuração Profissional -->
+            <div id="card1" class="card bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+                <div class="p-5 cursor-pointer flex justify-between items-center bg-gray-50" onclick="toggleCard('card1')">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-blue-100 p-2 rounded-full">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">Configuração Profissional do Gerenciador de Negócios</h2>
+                    </div>
+                    <div class="arrow">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </div>
+                <div class="card-content px-5 md:px-8 text-gray-700">
+                    <p>O Gerenciador de Negócios (Business Manager) foi criado seguindo estritamente as boas práticas recomendadas pela Meta. Este processo estabelece uma base sólida e segura para todas as operações de marketing digital da empresa.</p>
+                    <p class="mt-4">Com a futura validação da empresa, a estrutura passa a funcionar como uma prestadora de serviços publicitários para si mesma, ou uma <strong>"agência interna"</strong>. Isso centraliza o controle, profissionaliza a gestão e garante a conformidade com as políticas da plataforma.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Benefícios e Acessos -->
+            <div id="card2" class="card bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+                <div class="p-5 cursor-pointer flex justify-between items-center bg-gray-50" onclick="toggleCard('card2')">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-green-100 p-2 rounded-full">
+                           <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">Acesso a Serviços Avançados</h2>
+                    </div>
+                     <div class="arrow">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </div>
+                <div class="card-content px-5 md:px-8 text-gray-700">
+                    <p>A validação da empresa no Gerenciador de Negócios desbloqueia ferramentas cruciais que antes não estavam disponíveis, elevando o potencial de alcance e colaboração:</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2">
+                        <li><strong>Anúncios de Parceria (Branded Content):</strong> Possibilidade de veicular anúncios em colaboração com outras marcas e parceiros de forma oficial e transparente.</li>
+                        <li><strong>Colaboração com Influenciadores:</strong> Acesso a ferramentas para criar campanhas com influenciadores digitais onde a Meta atua como intermediária, facilitando o processo e garantindo a conformidade.</li>
+                        <li><strong>APIs de Marketing:</strong> Acesso a integrações mais profundas para automação e análise de dados.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3: Segurança e Propriedade -->
+            <div id="card3" class="card bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden">
+                <div class="p-5 cursor-pointer flex justify-between items-center bg-gray-50" onclick="toggleCard('card3')">
+                     <div class="flex items-center space-x-4">
+                        <div class="bg-yellow-100 p-2 rounded-full">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.789-2.756 9.348m-2.244-9.348a9.015 9.015 0 011.642-5.41M12 11h.01M12 11c0-2.051.528-4.02 1.464-5.696M12 11c-3.134 0-6.052 1.603-7.79 4.102M12 11a9.037 9.037 0 012.756 9.348M12 11c-2.435 0-4.717 1.03-6.28 2.758M5.21 15.102a9.037 9.037 0 019.58-9.58m-9.58 9.58a9.037 9.037 0 01-1.464-5.696M3.746 9.404a9.015 9.015 0 015.41-1.642M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h2 class="text-xl font-semibold text-gray-800">Segurança e Vinculação da Propriedade Intelectual</h2>
+                    </div>
+                     <div class="arrow">
+                        <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                </div>
+                <div class="card-content px-5 md:px-8 text-gray-700">
+                    <p>Anteriormente, nenhum ativo digital (páginas, contas de anúncio, pixels, e nem mesmo a conta do WhatsApp Business) estava formalmente vinculado à empresa.</p>
+                    <p class="mt-4"><strong>A principal ação deste projeto foi iniciar a vinculação de todos esses ativos ao CNPJ da empresa.</strong> Embora seja um processo mais complexo, ele é fundamental para garantir:</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2">
+                        <li><strong>Propriedade Legal:</strong> Garante que a propriedade intelectual (seguidores, conteúdo, dados) pertence legalmente à empresa, e não a perfis pessoais.</li>
+                        <li><strong>Segurança e Recuperação:</strong> Em caso de perda de acesso, a recuperação das contas se torna viável através de documentos oficiais, como o <strong>Contrato Social</strong>, oferecendo uma camada de segurança robusta.</li>
+                        <li><strong>Controle de Conteúdo:</strong> Permite à empresa solicitar a restrição de uso indevido de seus vídeos e materiais de marca por terceiros na plataforma.</li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
+                        <h3 class="font-bold text-blue-800">Status Atual</h3>
+                        <p class="text-blue-700">A vinculação da conta do WhatsApp Business e outros ativos foi submetida e está <strong>aguardando aprovação</strong> pela equipe da Meta. Este é um passo normal e necessário do processo de validação.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="text-center mt-12 text-gray-500">
+            <p>&copy; 2024 - Relatório gerado para documentação de processos internos.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleCard(cardId) {
+            const card = document.getElementById(cardId);
+            card.classList.toggle('open');
+        }
+        // Abrir o primeiro card por padrão para uma melhor primeira impressão
+        document.addEventListener('DOMContentLoaded', () => {
+            toggleCard('card1');
+        });
+    </script>
+
+</body>
+</html>
